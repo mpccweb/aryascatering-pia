@@ -3,326 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARYA's Catering - Pia Anne Ofiana | Premium Catering Services</title>
+    <title>ARYA's Catering - Pia Anne Ofiana</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        header {
-            background: #660d0d;
-            color: #f9d028;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: #f9d028;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #ffffff;
-            opacity: 0.95;
-        }
-
-        nav {
-            background: #660d0d;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 1rem;
-        }
-
-        nav ul li {
-            margin: 0 1rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #f9d028;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #ffffff;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        .hero {
-            background: #f9cf28;
-            padding: 3rem 1rem;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .hero h2 {
-            font-size: 2rem;
-            color: #660d0d;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #333;
-        }
-
-        .about {
-            margin-bottom: 3rem;
-        }
-
-        .about h2 {
-            color: #660d0d;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .about p {
-            font-size: 1.1rem;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 1rem;
-        }
-
-        .services {
-            margin-bottom: 3rem;
-        }
-
-        .services h2 {
-            color: #660d0d;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: #f9cf28;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-
-        .service-card h3 {
-            color: #660d0d;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .service-card p {
-            color: #333;
-        }
-
-        .gallery {
-            margin-bottom: 3rem;
-        }
-
-        .gallery h2 {
-            color: #660d0d;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .gallery-item {
-            aspect-ratio: 4/3;
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .gallery-item-label {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(102, 13, 13, 0.85);
-            color: #f9d028;
-            padding: 0.5rem;
-            text-align: center;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .contact {
-            background: #660d0d;
-            color: #ffffff;
-            padding: 3rem 1rem;
-            border-radius: 10px;
-            margin-bottom: 3rem;
-        }
-
-        .contact h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            color: #f9d028;
-        }
-
-        .contact-info {
-            max-width: 700px;
-            margin: 2rem auto;
-            text-align: center;
-        }
-
-        .contact-card {
-            background: rgba(249, 207, 40, 0.1);
-            padding: 2rem;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            border: 2px solid #f9cf28;
-        }
-
-        .contact-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #f9d028;
-        }
-
-        .contact-card p {
-            font-size: 1.1rem;
-            margin: 0.5rem 0;
-            color: #ffffff;
-        }
-
-        .contact-card a {
-            color: #f9d028;
-            text-decoration: none;
-            font-weight: 600;
-            transition: opacity 0.3s;
-        }
-
-        .contact-card a:hover {
-            opacity: 0.8;
-        }
-
-        .business-card-img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            margin: 2rem auto;
-            display: block;
-        }
-
-        .contact-button {
-            display: inline-block;
-            background: #f9d028;
-            color: #660d0d;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .contact-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(249, 208, 40, 0.3);
-        }
-
-        footer {
-            background: #660d0d;
-            color: #ffffff;
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-        }
-
-        footer a {
-            color: #f9d028;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            opacity: 0.8;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        header { background: #660d0d; color: #f9d028; padding: 2rem 1rem; text-align: center; }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #f9d028; }
+        header p { font-size: 1.2rem; color: #ffffff; opacity: 0.95; }
+        nav { background: #660d0d; box-shadow: 0 2px 5px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; padding: 1rem; }
+        nav ul li { margin: 0 1rem; }
+        nav ul li a { text-decoration: none; color: #f9d028; font-weight: 600; transition: color 0.3s; }
+        nav ul li a:hover { color: #ffffff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+        .hero { background: #f9cf28; padding: 3rem 1rem; text-align: center; margin-bottom: 3rem; }
+        .hero h2 { font-size: 2rem; color: #660d0d; margin-bottom: 1rem; }
+        .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; color: #333; }
+        .about { margin-bottom: 3rem; }
+        .about h2 { color: #660d0d; font-size: 2rem; margin-bottom: 1rem; text-align: center; }
+        .about p { font-size: 1.1rem; text-align: center; max-width: 800px; margin: 0 auto 1rem; }
+        .services { margin-bottom: 3rem; }
+        .services h2 { color: #660d0d; font-size: 2rem; margin-bottom: 2rem; text-align: center; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .service-card { background: #f9cf28; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+        .service-card h3 { color: #660d0d; margin-bottom: 1rem; font-size: 1.5rem; }
+        .service-card p { color: #333; }
+        .gallery { margin-bottom: 3rem; }
+        .gallery h2 { color: #660d0d; font-size: 2rem; margin-bottom: 2rem; text-align: center; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+        .gallery-item { aspect-ratio: 4/3; border-radius: 10px; overflow: hidden; position: relative; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .gallery-item:hover { transform: scale(1.05); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+        .gallery-item-label { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(102, 13, 13, 0.85); color: #f9d028; padding: 0.5rem; text-align: center; font-weight: 600; font-size: 0.9rem; }
+        .contact { background: #660d0d; color: #ffffff; padding: 3rem 1rem; border-radius: 10px; margin-bottom: 3rem; }
+        .contact h2 { font-size: 2rem; margin-bottom: 1rem; text-align: center; color: #f9d028; }
+        .contact-info { max-width: 700px; margin: 2rem auto; text-align: center; }
+        .contact-card { background: rgba(249, 207, 40, 0.1); padding: 2rem; border-radius: 10px; backdrop-filter: blur(10px); border: 2px solid #f9cf28; }
+        .contact-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #f9d028; }
+        .contact-card p { font-size: 1.1rem; margin: 0.5rem 0; color: #ffffff; }
+        .contact-card a { color: #f9d028; text-decoration: none; font-weight: 600; transition: opacity 0.3s; }
+        .contact-card a:hover { opacity: 0.8; }
+        .business-card-img { width: 100%; max-width: 600px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); margin: 2rem auto; display: block; }
+        footer { background: #660d0d; color: #ffffff; text-align: center; padding: 2rem 1rem; }
+        footer p { margin: 0.5rem 0; }
+        footer a { color: #f9d028; text-decoration: none; }
+        footer a:hover { opacity: 0.8; }
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .hero h2 {
-                font-size: 1.5rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav ul li {
-                margin: 0.5rem 0;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            }
+            header h1 { font-size: 2rem; }
+            .hero h2 { font-size: 1.5rem; }
+            nav ul { flex-direction: column; align-items: center; }
+            nav ul li { margin: 0.5rem 0; }
+            .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
         }
     </style>
 </head>
@@ -331,7 +63,6 @@
         <h1>ARYA's Catering</h1>
         <p>Elevating Every Occasion into an Extraordinary Experience</p>
     </header>
-
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -340,14 +71,12 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
     <div class="hero">
         <div class="container">
             <h2>Premium and Affordable Catering for Metro Manila</h2>
             <p>Our passion for crafting culinary delights, paired with unmatched elegance, ensures that every event is memorable and unique. Let us bring exceptional flavors and impeccable service to your special moments!</p>
         </div>
     </div>
-
     <section id="about" class="about">
         <div class="container">
             <h2>Crafting Memorable Dining Experiences</h2>
@@ -355,7 +84,6 @@
             <p>We have been delighting our clients with exceptional culinary experiences since our inception. Let us transform your event into an extraordinary and unforgettable affair.</p>
         </div>
     </section>
-
     <section id="services" class="services">
         <div class="container">
             <h2>Our Services</h2>
@@ -382,7 +110,6 @@
             </div>
         </div>
     </section>
-
     <section id="gallery" class="gallery">
         <div class="container">
             <h2>Our Work</h2>
@@ -417,7 +144,6 @@
             </div>
         </div>
     </section>
-
     <section id="contact" class="contact">
         <div class="container">
             <h2>Let's Make Your Event Extraordinary</h2>
@@ -432,17 +158,15 @@
                     
                     <p style="margin-top: 1.5rem;"><strong>Pia Anne C. Ofiana</strong></p>
                     <p>Marketing and Sales Officer</p>
-                    <p style="margin-top: 1rem;">Phone: <a href="tel:09328592661">0932.859.2661</a></p>
-                    <p>Email: <a href="mailto:aryascatering.pia@gmail.com">aryascatering.pia@gmail.com</a></p>
-                    
-                    <div style="margin-top: 2rem;">
-                        <a href="mailto:aryascatering.pia@gmail.com" class="contact-button">Send Me an Email</a>
-                    </div>
+                    <p style="margin-top: 1rem;">📱 Phone: <a href="tel:+639328592661">0932.859.2661</a></p>
+                    <p style="margin-top: 0.5rem;">
+                        <span style="color: #ffffff; font-size: 0.95rem;">EMAIL:</span> 
+                        <a href="mailto:aryascatering.pia@gmail.com" style="color: #f9d028; font-weight: 700; font-size: 1.15rem; text-decoration: underline;">aryascatering.pia@gmail.com</a>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <p>&copy; 2024 ARYA's Catering. All rights reserved.</p>
